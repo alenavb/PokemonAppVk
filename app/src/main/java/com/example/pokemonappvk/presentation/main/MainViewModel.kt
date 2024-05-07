@@ -8,10 +8,12 @@ import com.example.pokemonappvk.data.remote.RetrofitInstance
 import com.example.pokemonappvk.domain.PokeRepository
 import com.example.pokemonappvk.data.repository.PokeRepositoryImpl
 import com.example.pokemonappvk.domain.modelpokelist.ModelListPoke
+import dagger.assisted.AssistedFactory
+import dagger.assisted.AssistedInject
 import kotlinx.coroutines.launch
 import retrofit2.Response
 
-class MainViewModel(application: Application) : AndroidViewModel(application) {
+class MainViewModel @AssistedInject constructor(application: Application) : AndroidViewModel(application) {
     private val repo: PokeRepository
     val myListPoke: MutableLiveData<Response<ModelListPoke>> = MutableLiveData()
 
@@ -24,5 +26,10 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
         viewModelScope.launch {
             myListPoke.value = repo.getListPoke()
         }
+    }
+
+    @AssistedFactory
+    interface Factory {
+        fun create(): MainViewModel
     }
 }

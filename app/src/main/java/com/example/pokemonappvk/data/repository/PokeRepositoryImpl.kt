@@ -5,8 +5,9 @@ import com.example.pokemonappvk.domain.PokeRepository
 import com.example.pokemonappvk.domain.modelpokeimage.ModeImagelPoke
 import com.example.pokemonappvk.domain.modelpokelist.ModelListPoke
 import retrofit2.Response
+import javax.inject.Inject
 
-class PokeRepositoryImpl(private val api: RemoteApi) : PokeRepository {
+class PokeRepositoryImpl @Inject constructor(private val api: RemoteApi) : PokeRepository {
     override suspend fun getPokemonByName(name: String): Response<ModeImagelPoke> {
         return api.getPokemonByName(name)
     }
