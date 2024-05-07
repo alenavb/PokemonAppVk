@@ -1,9 +1,9 @@
 package com.example.pokemonappvk.domain.modelpokeimage
 
-data class ModeImagelPoke(
+data class ModeImagePoke(
     val abilities: List<Ability>,
     val base_experience: Int,
-    val cries: Cries,
+//    val cries: Cries,
     val forms: List<Form>,
     val game_indices: List<GameIndice>,
     val height: Int,
@@ -16,8 +16,8 @@ data class ModeImagelPoke(
     val order: Int,
     val past_abilities: List<Any>,
     val past_types: List<Any>,
-    val species: Species,
-    val sprites: Sprites,
+//    val species: Species,
+//    val sprites: Sprites,
     val stats: List<Stat>,
     val types: List<Type>,
     val weight: Int
