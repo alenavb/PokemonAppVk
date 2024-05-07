@@ -12,6 +12,6 @@
   </tr>
   <tr>
     <td><img src="https://github.com/avbolotova/PokemonAppVk/blob/di/app/src/main/res/drawable/screenshot132504.png" width="300"></td>
-    <td><img src="https://github.com/avbolotova/PokemonAppVk/blob/di/app/src/main/res/drawable/screenshot132527.png" width="300"></td>
+    <td><img src="https://github.com/avbolotova/PokemonAppVk/blob/di/app/src/main/res/drawable/screenshot151739.png" width="300"></td>
   </tr>
 </table>
