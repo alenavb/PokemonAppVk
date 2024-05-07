@@ -10,6 +10,7 @@ import androidx.fragment.app.FragmentManager
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.pokemonappvk.R
+import com.example.pokemonappvk.domain.modelpokeimage.ModeImagePoke
 import com.example.pokemonappvk.domain.modelpokelist.Result
 import com.example.pokemonappvk.presentation.details.DetailsFragment
 
@@ -28,6 +29,7 @@ class MainAdapter(private val fragmentManager: FragmentManager) : RecyclerView.A
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         val pokemon = listAllPoke[position]
+
         Glide.with(holder.itemView.context)
             .load(getImageUrl(pokemon.url))
             .placeholder(R.drawable.load_img)
@@ -36,6 +38,7 @@ class MainAdapter(private val fragmentManager: FragmentManager) : RecyclerView.A
         holder.tvName.text = pokemon.name
 
         holder.itemView.setOnClickListener {
+
             val bundle = Bundle().apply {
                 putString("pokemonName", pokemon.name)
                 putString("pokemonImageUrl", getImageUrl(pokemon.url))

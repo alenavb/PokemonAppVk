@@ -30,6 +30,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         app:cardCornerRadius="30dp"
+
         android:backgroundTint="#FFFFFF"
         app:layout_constraintTop_toBottomOf="@+id/imgLogoPoke"
         tools:ignore="MissingConstraints">
@@ -43,6 +44,7 @@
         app:navGraph="@navigation/nav_graph"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginBottom="20dp"
         app:layout_constraintStart_toStartOf="parent"/>
 
     </androidx.cardview.widget.CardView>
