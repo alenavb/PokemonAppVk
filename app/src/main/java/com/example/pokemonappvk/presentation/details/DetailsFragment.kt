@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import com.bumptech.glide.Glide
 import com.example.pokemonappvk.R
 import com.example.pokemonappvk.databinding.FragmentDetailsBinding
+import com.example.pokemonappvk.presentation.utils.appComponent
 
 
 class DetailsFragment : Fragment() {
@@ -33,5 +34,9 @@ class DetailsFragment : Fragment() {
             .load(pokemonImageUrl)
             .placeholder(R.drawable.load_img)
             .into(mBind.imgDetailed)
+    }
+
+    fun inject() {
+        requireContext().appComponent().inject(this)
     }
 }

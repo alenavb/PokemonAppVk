@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.pokemonappvk.R
 import com.example.pokemonappvk.databinding.FragmentMainBinding
+import com.example.pokemonappvk.presentation.utils.appComponent
 
 
 class MainFragment : Fragment() {
@@ -44,6 +45,10 @@ class MainFragment : Fragment() {
             val products = response.body()?.results
             products?.let { adapter.submitList(it) }
         }
+    }
+
+    fun inject() {
+        requireContext().appComponent().inject(this)
     }
 }
 
