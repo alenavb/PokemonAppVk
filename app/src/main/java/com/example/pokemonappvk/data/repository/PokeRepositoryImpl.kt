@@ -1,0 +1,17 @@
+package com.example.pokemonappvk.data.repository
+
+import com.example.pokemonappvk.data.remote.RemoteApi
+import com.example.pokemonappvk.domain.PokeRepository
+import com.example.pokemonappvk.domain.modelpokeimage.ModeImagelPoke
+import com.example.pokemonappvk.domain.modelpokelist.ModelListPoke
+import retrofit2.Response
+
+class PokeRepositoryImpl(private val api: RemoteApi) : PokeRepository {
+    override suspend fun getPokemonByName(name: String): Response<ModeImagelPoke> {
+        return api.getPokemonByName(name)
+    }
+
+    override suspend fun getListPoke(): Response<ModelListPoke> {
+        return api.getListPoke()
+    }
+}
